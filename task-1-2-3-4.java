@@ -4,7 +4,7 @@ import static java.lang.System.out;
 
 class task1{
     public static void main(String [] args) throws Exception{
-   //     args = new String [] {"txt.txt"};
+      //  args = new String [] {"txt.txt"};
         
         float sum = 0;
         int size = 0;
@@ -24,22 +24,22 @@ class task1{
         int f = (int)Math.floor(k);
         int c = (int)Math.ceil(k);
         if (f == c){
-            out.printf("%2f\n", list.get(f));
+            out.printf("%.2f\n", list.get(f));
         }
         else{
-            out.printf("%2f\n", list.get(f)*(((float)c)-k)+list.get(c)*(((float)k)-f));
+            out.printf("%.2f\n", list.get(f)*(((float)c)-k)+list.get(c)*(((float)k)-f));
         }
         
         if ((size%2)==0){
-            out.printf("%02f\n", (float)(list.get((int)(size/2))+list.get(((int)(size/2))-1))/2);
+            out.printf("%.2f\n", (float)(list.get((int)(size/2))+list.get(((int)(size/2))-1))/2);
         }
         else{
-            out.printf("%02f\n", list.get((int)(size/2)));
+            out.printf("%.2f\n", list.get((int)(size/2)));
         }
         
-        out.printf("%02f\n", list.get(size - 1));
-        out.printf("%02f\n", list.get(0));
-        out.printf("%02f\n", sum / size);
+        out.printf("%.2f\n", list.get(size - 1));
+        out.printf("%.2f\n", list.get(0));
+        out.printf("%.2f\n", sum / size);
         }
         catch(ArrayIndexOutOfBoundsException e){
             System.out.println("usage: java task <file1>");
